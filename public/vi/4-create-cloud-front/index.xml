@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tạo CloudFront distribution on SERVERLESS - THIẾT LẬP TRANG WEB SSL S3 STATIC</title>
+    <link>/vi/4-create-cloud-front/</link>
+    <description>Recent content in Tạo CloudFront distribution on SERVERLESS - THIẾT LẬP TRANG WEB SSL S3 STATIC</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <atom:link href="/vi/4-create-cloud-front/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

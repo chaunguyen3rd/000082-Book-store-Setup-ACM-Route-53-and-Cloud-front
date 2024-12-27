@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tạo miền và Hosted zone on SERVERLESS - THIẾT LẬP TRANG WEB SSL S3 STATIC</title>
+    <link>/vi/2-create-domain-hosted-zone/</link>
+    <description>Recent content in Tạo miền và Hosted zone on SERVERLESS - THIẾT LẬP TRANG WEB SSL S3 STATIC</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <atom:link href="/vi/2-create-domain-hosted-zone/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
