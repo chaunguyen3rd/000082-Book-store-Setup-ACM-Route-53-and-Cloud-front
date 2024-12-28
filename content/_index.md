@@ -11,7 +11,7 @@ chapter : false
 In this workshop in the serverless series, we will set up website application to be more sercure in transit by using an SSL certificate. An SSL Certificate allows traffic between a user and a website application hosted on an S3 bucket to be encrypted in transit (in-flight encryption).
 
 The architecture of the web application will look like this:
-![SeverlessExample](/images/serverless-diagram.png?featherlight=false&width=50pc)
+![ServerlessExample](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/serverless-diagram.png?featherlight=false&width=50pc)
 
 - AWS Certificate Manager: manage SSL certificates
 - Amazon Route 53: provide custom domain

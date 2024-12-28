@@ -11,7 +11,7 @@ chapter : false
 Trong bài này của series, chúng ta sẽ thiết lập để ứng dụng web bảo mật hơn khi transit bằng cách sử dụng SSL Certificate. SSL Certificate cho phép lưu lượng truy cập giữa người dùng và ứng dụng web host trên S3 bucket được mã hoá khi transit (in-flight encryption).
 
 Kiến trúc của ứng dụng web sẽ như sau:
-![SeverlessExample](/images/serverless-diagram.png?featherlight=false&width=50pc)
+![ServerlessExample](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/serverless-diagram.png?featherlight=false&width=50pc)
 
 - AWS Certificate Manager: quản lý SSL certificate
 - Amazon Route 53: cung cấp domain tuỳ chỉnh

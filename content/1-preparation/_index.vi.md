@@ -29,7 +29,7 @@ Trước khi thực hiện nội dung chính của workshop này, chúng ta cầ
     - Allow SAM CLI IAM role creation [Y/n]: y
     - Disable rollback [y/N]: n
     - Save arguments to configuration file [Y/n]: y
-      ![Preparation](/images/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/temp/1/1.png?width=90pc)
+      ![Preparation](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/1.png?width=90pc)
 
 4. Tải xuống mã nguồn **FCJ-Serverless-Workshop** về thiết bị của bạn.
     - Mở terminal trên máy tính của bạn trong thư mục nơi bạn muốn lưu mã nguồn.
@@ -50,7 +50,7 @@ Trước khi thực hiện nội dung chính của workshop này, chúng ta cầ
           })
         ```
 
-        ![Preparation](/images/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/temp/1/2.png?width=90pc)
+        ![Preparation](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/2.png?width=90pc)
       - Tiếp theo, mở **src/component/Authen/Register.js** và chỉnh sửa như dưới đây.
 
         ```javascript
@@ -67,7 +67,7 @@ Trước khi thực hiện nội dung chính của workshop này, chúng ta cầ
         })
         ```
 
-        ![Preparation](/images/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/temp/1/3.png?width=90pc)
+        ![Preparation](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/3.png?width=90pc)
 
       - Quay lại thư mục gốc của **FCJ-Serverless-Workshop** và chạy các lệnh dưới đây.
 

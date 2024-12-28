@@ -29,7 +29,7 @@ Ensure you have the AWS CLI and SAM CLI installed on your machine, configure AWS
     - Allow SAM CLI IAM role creation [Y/n]: y
     - Disable rollback [y/N]: n
     - Save arguments to configuration file [Y/n]: y
-      ![Preparation](/images/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/temp/1/1.png?width=90pc)
+      ![Preparation](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/1.png?width=90pc)
 
 4. Download the **FCJ-Serverless-Workshop** code to your device.
     - Open a terminal on your computer in the folder where you want to save the source code.
@@ -50,7 +50,7 @@ Ensure you have the AWS CLI and SAM CLI installed on your machine, configure AWS
         })
         ```
 
-        ![Preparation](/images/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/temp/1/2.png?width=90pc)
+        ![Preparation](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/2.png?width=90pc)
       - Next, open **src/component/Authen/Register.js** and edit as below.
 
         ```javascript
@@ -67,7 +67,7 @@ Ensure you have the AWS CLI and SAM CLI installed on your machine, configure AWS
         })
         ```
 
-        ![Preparation](/images/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/temp/1/3.png?width=90pc)
+        ![Preparation](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/3.png?width=90pc)
     - Back to **FCJ-Serverless-Workshop** root path and run the commands below.
 
       ```bash
