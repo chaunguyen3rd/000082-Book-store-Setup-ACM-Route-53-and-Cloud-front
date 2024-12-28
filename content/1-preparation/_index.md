@@ -6,49 +6,79 @@ chapter : false
 pre : " <b> 1. </b> "
 ---
 Before we get to the main content of this workshop, we need to reset the web application.
-1. Download the below source code
 
-{{%attachments title="Source code" pattern=".*\.(zip)$"/%}}
+1. Download the below source code.
 
-2. Run the below commands
-    ```
+    {{%attachments title="Source code" pattern=".*\.(zip)$"/%}}
+
+2. Run the below commands.
+{{% notice note %}}
+Ensure you have the AWS CLI and SAM CLI installed on your machine, configure AWS credentials before running the commands.
+{{% /notice %}}
+
+    ```bash
     sam build
+    sam validate
     sam deploy --guided
     ```
 
-3. Enter the following content:
-
-    - Stack Name []: `fcj-book-shop`
+3. Enter the following content. Leave as default.
+    - Stack Name []: `fcj-book-store`
     - AWS Region []: `us-east-1`
     - Confirm changes before deploy [Y/n]: y
     - Allow SAM CLI IAM role creation [Y/n]: y
     - Disable rollback [y/N]: n
-    - BooksList may not have authorization defined, Is this okay? [y/N]: y
-    - BookCreate may not have authorization defined, Is this okay? [y/N]: y
-    - BookDelete may not have authorization defined, Is this okay? [y/N]: y
     - Save arguments to configuration file [Y/n]: y
+      ![Preparation](/images/temp/1/1.png?width=90pc)
 
-4. Open [AWS APIs Gateway console](https://ap-southeast-1.console.aws.amazon.com/apigateway/main/apis?region=us-east-1). Then click **API Gateway REST API to Lambda**
-    ![CreateUserPool](/images/1/1.png?width=90pc)
+4. Download the **FCJ-Serverless-Workshop** code to your device.
+    - Open a terminal on your computer in the folder where you want to save the source code.
+    - Copy the below command.
 
-6. Click **Stage** on the left menu
-    - Click **staging**
-    - Record the **InvokeURL**
-    ![CreateUserPool](/images/1/2.png?width=90pc)
+      ```bash
+      git clone https://github.com/AWS-First-Cloud-Journey/FCJ-Serverless-Workshop.git
+      cd FCJ-Serverless-Workshop
+      ```
 
-7. Run the below command to download the source code of **FCJ-Serverless-Workshop** to your device
-    ```
-    git clone https://github.com/AWS-First-Cloud-Journey/FCJ-Serverless-Workshop.git
-    ```
-    - Open **config.js** file, replace value of **APP_API_URL** with **InvokeURL**
+    - Open **FCJ-Serverless-Workshop** with VSCode and edit.
+      - Open **src/component/Authen/Login.js** and edit as below.
 
-8. Run the below commands to build project
+        ```javascript
+        data: JSON.stringify({
+            username: email,
+            password: password
+        })
+        ```
+
+        ![Preparation](/images/temp/1/2.png?width=90pc)
+      - Next, open **src/component/Authen/Register.js** and edit as below.
+
+        ```javascript
+        data: JSON.stringify({
+          username: email,
+          password: password
+        })
+        ```
+
+        ```javascript
+        data: JSON.stringify({
+            username: email,
+            confirmation_code: code
+        })
+        ```
+
+        ![Preparation](/images/temp/1/3.png?width=90pc)
+    - Back to **FCJ-Serverless-Workshop** root path and run the commands below.
+
+      ```bash
+      yarn
+      yarn build
+      ```
+
+5. We have finished building the front-end. Next execute the following command to upload the **build** folder to S3.
+
+    ```bash
+    aws s3 cp build s3://fcj-book-shop-by-myself --recursive
     ```
-    cd FCJ-Serverless-Workshop
-    yarn build
-    ```
-9. We have finished building the front-end. Next, run the below command to upload **build** folder to S3 bucket
-    ```
-    aws s3 cp build s3://fcj-book-shop --recursive
-    ```
+
 So we have rebuilt the web application.
