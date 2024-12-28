@@ -5,34 +5,34 @@ weight : 3
 chapter : false
 pre : " <b> 3. </b> "
 ---
-1. Open [AWS Certificate Manager console](https://us-east-1.console.aws.amazon.com/acm/home?region=us-east-1#/welcome).
+1. Mở [AWS Certificate Manager console](https://us-east-1.console.aws.amazon.com/acm/home?region=us-east-1#/welcome).
 {{% notice note %}}
-The required region to generate the certificate is N.Virginia (us-east-1)
+Khu vực yêu cầu để tạo chứng chỉ là N.Virginia (us-east-1)
 {{% /notice %}}
 
-2. At **AWS Certificate Manager (ACM)** page.
-    - Click **Request certificate** on the left menu
+2. Tại trang **AWS Certificate Manager (ACM)**.
+    - Nhấp vào **Request certificate** ở menu bên trái
       ![RequestCertificate](/images/temp/1/14.png?width=90pc)
-    - At **Request certificate** page.
-      - Choose **Request a public certificate**.
-      - Click **Next** button.
+    - Tại trang **Request certificate**.
+      - Chọn **Request a public certificate**.
+      - Nhấn nút **Next**.
         ![RequestCertificate](/images/temp/1/15.png?width=90pc)
-    - At **Request public certificate** page.
-      - Enter ***.chaunguyen.site**.
-      - Click **Add another name to this certificate**.
-      - Enter **chaunguyen.site**.
+    - Tại trang **Request public certificate**.
+      - Nhập ***.chaunguyen.site**.
+      - Nhấp vào **Add another name to this certificate**.
+      - Nhập **chaunguyen.site**.
         ![RequestCertificate](/images/temp/1/16.png?width=90pc)
-      - Leave as default, scroll down and click **Request** button.
+      - Giữ nguyên cấu hình mặc định, cuộn xuống và nhấn nút **Request**.
         ![RequestCertificate](/images/temp/1/17.png?width=90pc)
-    - At **35bcec96-7527-4c2e-99ff-3f961c58a81d** certificate page that just created.
-      - Click **Create records in Route 53**.
+    - Tại trang chứng chỉ **35bcec96-7527-4c2e-99ff-3f961c58a81d** vừa tạo.
+      - Nhấn **Create records in Route 53**.
         ![RequestCertificate](/images/temp/1/18.png?width=90pc)
-    - At **Create DNS records in Amazon Route 53** page.
-      - Check both ***.chaunguyen.site** and **chaunguyen.site**.
-      - Click **Create records**.
+    - Tại trang **Create DNS records in Amazon Route 53**.
+      - Chọn cả ***.chaunguyen.site** và **chaunguyen.site**.
+      - Nhấn **Create records**.
         ![RequestCertificate](/images/temp/1/19.png?width=90pc)
-    - Back to **35bcec96-7527-4c2e-99ff-3f961c58a81d** certificate page.
-      - Wait for moment to AWS confirm your domain, after successful confirmation change the status to **Success**.
+    - Quay lại trang chứng chỉ **35bcec96-7527-4c2e-99ff-3f961c58a81d**.
+      - Đợi một lát để AWS xác nhận tên miền của bạn, sau khi xác nhận thành công trạng thái sẽ chuyển thành **Success**.
         ![RequestCertificate](/images/temp/1/20.png?width=90pc)
 
-We have successfully requested an SSL certificate. This certificate will be used by CloudFront in the next step.
+Chúng ta đã yêu cầu chứng chỉ SSL thành công. Chứng chỉ này sẽ được sử dụng bởi CloudFront trong bước tiếp theo.
