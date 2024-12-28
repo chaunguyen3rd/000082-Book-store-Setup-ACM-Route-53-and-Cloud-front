@@ -6,48 +6,79 @@ chapter : false
 pre : " <b> 1. </b> "
 ---
 Trước khi thực hiện nội dung chính của workshop này, chúng ta cần thiết lập lại ứng dụng web bằng AWS SAM.
-1. Tải source code dưới đây
 
-{{%attachments title="Source code" pattern=".*\.(zip)$"/%}}
+1. Tải xuống mã nguồn dưới đây.
 
-2. Chạy các câu lệnh dưới đây
-    ```
+    {{%attachments title="Source code" pattern=".*\.(zip)$"/%}}
+
+2. Run the below commands.
+{{% notice note %}}
+Ensure you have the AWS CLI and SAM CLI installed on your machine, configure AWS credentials before running the commands.
+{{% /notice %}}
+
+    ```bash
     sam build
+    sam validate
     sam deploy --guided
     ```
 
-3. Nhập nội dung như sau:
-    - Stack Name []: `fcj-book-shop`
+3. Enter the following content. Leave as default.
+    - Stack Name []: `fcj-book-store`
     - AWS Region []: `us-east-1`
     - Confirm changes before deploy [Y/n]: y
     - Allow SAM CLI IAM role creation [Y/n]: y
     - Disable rollback [y/N]: n
-    - BooksList may not have authorization defined, Is this okay? [y/N]: y
-    - BookCreate may not have authorization defined, Is this okay? [y/N]: y
-    - BookDelete may not have authorization defined, Is this okay? [y/N]: y
-    Save arguments to configuration file [Y/n]: y
+    - Save arguments to configuration file [Y/n]: y
+      ![Preparation](/images/temp/1/1.png?width=90pc)
 
-4. Mở bảng điều khiển của [AWS APIs Gateway](https://ap-southeast-1.console.aws.amazon.com/apigateway/main/apis?region=us-east-1). Sau đó, ấn chọn **API Gateway REST API to Lambda**
-![CreateUserPool](/images/1/1.png?width=90pc)
+4. Download the **FCJ-Serverless-Workshop** code to your device.
+    - Open a terminal on your computer in the folder where you want to save the source code.
+    - Copy the below command.
 
-6. Ấn chọn **Stage** ở menu phía bên trái
-    - Ấn chọn **staging**
-    - Ghi lại **InvokeURL**
-![CreateUserPool](/images/1/2.png?width=90pc)
+      ```bash
+      git clone https://github.com/AWS-First-Cloud-Journey/FCJ-Serverless-Workshop.git
+      cd FCJ-Serverless-Workshop
+      ```
 
-7. Thực hiện câu lệnh dưới đây để tải code **FCJ-Serverless-Workshop** về máy của bạn
-    ```
-    git clone https://github.com/AWS-First-Cloud-Journey/FCJ-Serverless-Workshop.git
-    ```
-    - Mở tệp **config.js**, thay giá trị của **APP_API_URL** bằng **InvokeURL**
+    - Open **FCJ-Serverless-Workshop** with VSCode and edit.
+      - Open **src/component/Authen/Login.js** and edit as below.
 
-8. Thực hiện các câu lệnh dưới đây để build project
+        ```javascript
+        data: JSON.stringify({
+            username: email,
+            password: password
+        })
+        ```
+
+        ![Preparation](/images/temp/1/2.png?width=90pc)
+      - Next, open **src/component/Authen/Register.js** and edit as below.
+
+        ```javascript
+        data: JSON.stringify({
+          username: email,
+          password: password
+        })
+        ```
+
+        ```javascript
+        data: JSON.stringify({
+            username: email,
+            confirmation_code: code
+        })
+        ```
+
+        ![Preparation](/images/temp/1/3.png?width=90pc)
+    - Back to **FCJ-Serverless-Workshop** root path and run the commands below.
+
+      ```bash
+      yarn
+      yarn build
+      ```
+
+5. We have finished building the front-end. Next execute the following command to upload the **build** folder to S3.
+
+    ```bash
+    aws s3 cp build s3://fcj-book-shop-by-myself --recursive
     ```
-    cd FCJ-Serverless-Workshop
-    yarn build
-    ```
-9. Chúng ta đã build xong front-end. Tiếp theo thực hiện câu lệnh sau để tải thư mục **build** lên S3 bucket
-    ```
-    aws s3 cp build s3://fcj-book-shop --recursive
-    ```
-Vậy là chúng ta đã tạo lại xong ứng dụng web.
+
+So we have rebuilt the web application.
