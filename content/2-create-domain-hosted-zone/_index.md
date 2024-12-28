@@ -11,36 +11,46 @@ In this step, we will create a Domain and Hosted zone with Amazon Route 53.
 Domain creation will cost you.
 {{% /notice %}}
 
-1. Open [Amazon Route 53](https://us-east-1.console.aws.amazon.com/route53/home?region=ap-southeast-1#)
+1. Open [Amazon Route 53](https://us-east-1.console.aws.amazon.com/route53/home?region=us-east-1#).
 
-2. Select **Registered domains** on the left menu
-    - Click **Register Domain**
-![CreateDomain](/images/1/3.png?width=90pc)
-3. Enter the domain name you want to create, ví dụ: `fcjbookshop`
-    - Select the appropriate Top Level Domain
-    - Click **Search** to check the domain name is available
-    - Click **Selected**
-    - Then click **Proceed to checkout**
-![CreateDomain](/images/1/4.png?width=90pc)
+2. If you don't own a domain, follow this step to register a new domain. At **Route 53** console page.
+    - Click **Registered domains** on the left menu.
+      ![CreateDomain](/images/temp/1/8.png?width=90pc)
+    - At **Registered domains** page, click **Register domains** button.
+      ![CreateDomain](/images/temp/1/9.png?width=90pc)
+    - At **Register domains** page.
+      - Enter the domain name you want to create at **Search for domain** box, ex: **fcjbookshop.com**.
+      - Click **Search** button.
+      - Click **Selected**.
+      - Click **Proceed to checkout**.
+        ![CreateDomain](/images/temp/1/10.png?width=90pc)
+    - At **Step 1: Pricing** page.
+      - Uncheck to off Auto-renew the domain after it expires.
+      - Click **Next** button.
+        ![CreateDomain](/images/temp/1/11.png?width=90pc)
+    - At **Step 2: Contact information** page.
+      - Enter your information.
+      - Scroll down and click **Next** button.
+        ![CreateDomain](/images/temp/1/12.png?width=90pc)
+    - At **Step 3: Review and submit** page.
+      - Scroll down and check **I have read and agree ...**.
+      - Click **Submit** button.
+        ![CreateDomain](/images/temp/1/13.png?width=90pc)
 
+3. If you already own your domain, you could follow this step. At **Route 53** console page.
+{{% notice note %}}
+[Making Route 53 the DNS service for a domain that's in use](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/migrate-dns-domain-in-use.html)
+{{% /notice %}}
+    - Click **Hosted zones** on the left menu.
+    ![CreateDomain](/images/temp/1/4.png?width=90pc)
+    - At **Hosted zones** page.
+      - Click **Create hosted zone** button.
+        ![CreateDomain](/images/temp/1/5.png?width=90pc)
+      - At **Create hosted zone** page.
+        - Enter your domain name at **Domain name**.
+        - Click **Create hosted zone** button.
+          ![CreateDomain](/images/temp/1/6.png?width=90pc)
+      - Check your new hosted zone.
+        ![CreateDomain](/images/temp/1/7.png?width=90pc)
 
-4. Uncheck to **off** **Auto-renew** the domain after it expires
-![CreateDomain](/images/1/5.png?width=90pc)
-
-5. Enter your personal information
-![CreateDomain](/images/1/6.png?width=90pc)
-7. At **Terms and Conditions** section, check to agree to the terms
-    - Click **Submit**
-![CreateDomain](/images/1/7.png?width=90pc)
-
-11. Wait for a while, your domain will be ready to use
-    - Select **Registered domains** on the left menu
-![CreateDomain](/images/1/8.png?width=90pc)
-13. Open your email provied above, click to link to verify the domain registration information from **noreply@registrar.amazon.com**
-![CreateDomain](/images/1/9.png?width=90pc)
-12. After the domain is registered successfully, the hosted zone will be create
-    - Select **Hosted zones** on the left menu
-![CreateDomain](/images/1/11.png?width=90pc)
-
-14. We are done creating a hosted name, next step we will request a SSL certificate with AWS Certificate Manager
-![CreateDomain](/images/1/12.png?width=90pc)
+We are done creating a hosted name, next step we will request a SSL certificate with AWS Certificate Manager.
