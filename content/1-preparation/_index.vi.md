@@ -1,6 +1,6 @@
 ---
 title : "Chuẩn bị"
-date :  "`r Sys.Date()`" 
+date :  2025-02-11 
 weight : 1 
 chapter : false
 pre : " <b> 1. </b> "
@@ -29,7 +29,7 @@ Trước khi thực hiện nội dung chính của workshop này, chúng ta cầ
     - Allow SAM CLI IAM role creation [Y/n]: y
     - Disable rollback [y/N]: n
     - Save arguments to configuration file [Y/n]: y
-      ![Preparation](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/1.png?width=90pc)
+      ![Preparation](/images/temp/1/1.png?width=90pc)
 
 4. Tải xuống mã nguồn **FCJ-Serverless-Workshop** về thiết bị của bạn.
     - Mở terminal trên máy tính của bạn trong thư mục nơi bạn muốn lưu mã nguồn.
@@ -40,41 +40,12 @@ Trước khi thực hiện nội dung chính của workshop này, chúng ta cầ
     cd FCJ-Serverless-Workshop
     ```
 
-    - Mở **FCJ-Serverless-Workshop** bằng VSCode và chỉnh sửa.
-      - Mở **src/component/Authen/Login.js** và chỉnh sửa như dưới đây.
+    - Sau đó chạy các lệnh dưới đây.
 
-        ```javascript
-          data: JSON.stringify({
-              username: email,
-              password: password
-          })
-        ```
-
-        ![Preparation](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/2.png?width=90pc)
-      - Tiếp theo, mở **src/component/Authen/Register.js** và chỉnh sửa như dưới đây.
-
-        ```javascript
-        data: JSON.stringify({
-          username: email,
-          password: password
-        })
-        ```
-
-        ```javascript
-        data: JSON.stringify({
-            username: email,
-            confirmation_code: code
-        })
-        ```
-
-        ![Preparation](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/3.png?width=90pc)
-
-      - Quay lại thư mục gốc của **FCJ-Serverless-Workshop** và chạy các lệnh dưới đây.
-
-        ```bash
-        yarn
-        yarn build
-        ```
+      ```bash
+      yarn
+      yarn build
+      ```
 
 5. Chúng ta đã hoàn thành việc xây dựng front-end. Tiếp theo, thực hiện lệnh sau để tải thư mục **build** lên S3.
 

@@ -1,6 +1,6 @@
 ---
 title : "Serverless - Setting up SSL for your serverless app"
-date :  "`r Sys.Date()`" 
+date :  2025-02-11 
 weight : 1 
 chapter : false
 ---
@@ -11,7 +11,7 @@ chapter : false
 In this workshop in the serverless series, we will set up website application to be more sercure in transit by using an SSL certificate. An SSL Certificate allows traffic between a user and a website application hosted on an S3 bucket to be encrypted in transit (in-flight encryption).
 
 The architecture of the web application will look like this:
-![ServerlessExample](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/serverless-diagram.png?featherlight=false&width=50pc)
+![ServerlessExample](/images/serverless-diagram.png?featherlight=false&width=50pc)
 
 - AWS Certificate Manager: manage SSL certificates
 - Amazon Route 53: provide custom domain
@@ -42,8 +42,8 @@ A simple approach for storing and delivering static content is to use an Amazon 
 
 #### Content
 
- 1. [Preparation](1-preparation/)
- 2. [Create Domain and Hosted zone](2-create-domain-hosted-zone/)
- 3. [Request SSL certificate](3-request-certificate/)
- 4. [Create CloudFront distribution](4-create-cloud-front/)
- 5. [Cleanup](5-cleanup)
+1. [Preparation](1-preparation/)
+2. [Create Domain and Hosted zone](2-create-domain-hosted-zone/)
+3. [Request SSL certificate](3-request-certificate/)
+4. [Create CloudFront distribution](4-create-cloud-front/)
+5. [Cleanup](5-cleanup)

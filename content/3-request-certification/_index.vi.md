@@ -1,6 +1,6 @@
 ---
 title : "Yêu cầu chứng chỉ SSL"
-date :  "`r Sys.Date()`" 
+date :  2025-02-11 
 weight : 3
 chapter : false
 pre : " <b> 3. </b> "
@@ -12,27 +12,27 @@ Khu vực yêu cầu để tạo chứng chỉ là N.Virginia (us-east-1)
 
 2. Tại trang **AWS Certificate Manager (ACM)**.
     - Nhấp vào **Request certificate** ở menu bên trái
-      ![RequestCertificate](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/14.png?width=90pc)
+      ![RequestCertificate](/images/temp/1/14.png?width=90pc)
     - Tại trang **Request certificate**.
       - Chọn **Request a public certificate**.
       - Nhấn nút **Next**.
-        ![RequestCertificate](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/15.png?width=90pc)
+        ![RequestCertificate](/images/temp/1/15.png?width=90pc)
     - Tại trang **Request public certificate**.
       - Nhập ***.chaunguyen.site**.
       - Nhấp vào **Add another name to this certificate**.
       - Nhập **chaunguyen.site**.
-        ![RequestCertificate](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/16.png?width=90pc)
+        ![RequestCertificate](/images/temp/1/16.png?width=90pc)
       - Giữ nguyên cấu hình mặc định, cuộn xuống và nhấn nút **Request**.
-        ![RequestCertificate](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/17.png?width=90pc)
+        ![RequestCertificate](/images/temp/1/17.png?width=90pc)
     - Tại trang chứng chỉ **35bcec96-7527-4c2e-99ff-3f961c58a81d** vừa tạo.
       - Nhấn **Create records in Route 53**.
-        ![RequestCertificate](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/18.png?width=90pc)
+        ![RequestCertificate](/images/temp/1/18.png?width=90pc)
     - Tại trang **Create DNS records in Amazon Route 53**.
       - Chọn cả ***.chaunguyen.site** và **chaunguyen.site**.
       - Nhấn **Create records**.
-        ![RequestCertificate](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/19.png?width=90pc)
+        ![RequestCertificate](/images/temp/1/19.png?width=90pc)
     - Quay lại trang chứng chỉ **35bcec96-7527-4c2e-99ff-3f961c58a81d**.
       - Đợi một lát để AWS xác nhận tên miền của bạn, sau khi xác nhận thành công trạng thái sẽ chuyển thành **Success**.
-        ![RequestCertificate](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/temp/1/20.png?width=90pc)
+        ![RequestCertificate](/images/temp/1/20.png?width=90pc)
 
 Chúng ta đã yêu cầu chứng chỉ SSL thành công. Chứng chỉ này sẽ được sử dụng bởi CloudFront trong bước tiếp theo.

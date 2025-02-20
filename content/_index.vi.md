@@ -1,6 +1,6 @@
 ---
 title : "Serverless - Thiết lập trang web SSL S3 Static"
-date :  "`r Sys.Date()`" 
+date :  2025-02-11 
 weight : 1 
 chapter : false
 ---
@@ -11,7 +11,7 @@ chapter : false
 Trong bài này của series, chúng ta sẽ thiết lập để ứng dụng web bảo mật hơn khi transit bằng cách sử dụng SSL Certificate. SSL Certificate cho phép lưu lượng truy cập giữa người dùng và ứng dụng web host trên S3 bucket được mã hoá khi transit (in-flight encryption).
 
 Kiến trúc của ứng dụng web sẽ như sau:
-![ServerlessExample](/000082-Book-store-Setup-ACM-Route-53-and-Cloud-front/images/serverless-diagram.png?featherlight=false&width=50pc)
+![ServerlessExample](/images/serverless-diagram.png?featherlight=false&width=50pc)
 
 - AWS Certificate Manager: quản lý SSL certificate
 - Amazon Route 53: cung cấp domain tuỳ chỉnh
@@ -42,8 +42,8 @@ Một cách tiếp cận đơn giản để lưu trữ và cung cấp nội dung
 
 #### Nội dung
 
- 1. [Chuẩn bị](1-preparation/)
- 2. [Tạo miền và Hosted zone](2-create-domain-hosted-zone/)
- 3. [Yêu cầu chứng chỉ SSL](3-request-certification/)
- 4. [Tạo CloudFront distribution](4-create-cloud-front/)
- 5. [Dọn dẹp tài nguyên](5-cleanup)
+1. [Chuẩn bị](1-preparation/)
+2. [Tạo miền và Hosted zone](2-create-domain-hosted-zone/)
+3. [Yêu cầu chứng chỉ SSL](3-request-certification/)
+4. [Tạo CloudFront distribution](4-create-cloud-front/)
+5. [Dọn dẹp tài nguyên](5-cleanup)
